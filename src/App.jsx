@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Col, Container, Row } from "react-bootstrap";
 import Player from "./components/Player";
-import Topbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
 import ArtistPage from "./components/ArtistPage";
 import AlbumPage from "./components/AlbumPage";
@@ -16,7 +16,7 @@ function App() {
         <Container fluid>
           <Row>
             <Col xs={2}>
-              <Topbar />
+              <Sidebar />
             </Col>
             <Col xs={12} md={9} className="offset-md-3 mainPage">
               <Routes>
