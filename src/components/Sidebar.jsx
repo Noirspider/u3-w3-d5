@@ -4,7 +4,7 @@ import logo from "../logo/Spotify_Logo.png";
 import { useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { search, setQueryParam } from "../redux/actions";
-import SearchBar from "./SearchBar"; // Assicurati che il percorso sia corretto
+import SearchBar from "./Searchbar";
 
 const Sidebar = () => {
   const location = useLocation();
