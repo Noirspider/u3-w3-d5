@@ -1,5 +1,4 @@
-import { combineReducers, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { encryptTransform } from "redux-persist-transform-encrypt";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import persistReducer from "redux-persist/es/persistReducer";
 import persistStore from "redux-persist/es/persistStore";
 import storage from "redux-persist/lib/storage";
@@ -12,7 +11,6 @@ import favourites from "../reducers/Favourites";
 const persistConfig = {
   key: "root",
   storage: storage,
-
   blacklist: ["GeneralReducers"],
 };
 
@@ -28,7 +26,7 @@ const persistedReducers = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducers,
-  middleware: getDefaultMiddleware({ serializableCheck: false }),
+  middleware: [],
 });
 
 export const persiStore = persistStore(store);
